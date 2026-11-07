@@ -2,7 +2,7 @@ import { MINUTES_PER_DAY } from '@/shared/domain/time';
 
 /**
  * A 24-hour dial: midnight at the top, noon at the bottom, clockwise.
- * Pure geometry, kept apart from the interactive clock that draws it.
+ * Pure geometry so the interactive clock and the welcome film draw the same thing.
  */
 export const DIAL = { size: 240, center: 120, ring: 92 } as const;
 

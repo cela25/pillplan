@@ -99,4 +99,11 @@ export default tseslint.config(
     files: ['src/**/*3D.tsx'],
     rules: { 'react/no-unknown-property': 'off' },
   },
+  {
+    // The intro film is a build-time Remotion project; it may reach into feature internals
+    // that have no CSS, because the app's public APIs pull in CSS modules webpack cannot load.
+    files: ['video/**/*.{ts,tsx}', 'scripts/**/*.ts'],
+    languageOptions: { globals: globals.node },
+    rules: { 'no-restricted-imports': 'off' },
+  },
 );

@@ -45,8 +45,8 @@ export function App({ startup: given, catalog }: AppProps) {
 }
 
 /**
- * First visit: the welcome screen, then the app. Leaving it runs one view transition, so the
- * welcome mark glides into the navbar while the rest crossfades.
+ * First visit: the welcome film, then the app. Leaving it runs one view transition, so the
+ * mark at the end of the film glides into the navbar while the rest crossfades.
  */
 function Entry({ startup }: { startup: Startup }) {
   const [welcome, setWelcome] = useState(startup.welcome ?? false);

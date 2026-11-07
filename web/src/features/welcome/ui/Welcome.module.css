@@ -1,4 +1,4 @@
-/* Sits straight on the page's ruled desk: no card. */
+/* Sits straight on the page's ruled desk: no card, the film's transparent webm shows the grid. */
 .welcome {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -12,7 +12,7 @@
 }
 
 .copy {
-  grid-column: 3 / span 8;
+  grid-column: 1 / span 5;
   display: grid;
   gap: var(--space-5);
 }
@@ -81,13 +81,66 @@
   color: var(--ink);
 }
 
+.stage {
+  grid-column: 6 / span 7;
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.sound {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: var(--step--1);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sound[aria-pressed='true'] {
+  border-color: var(--amber);
+  background: var(--amber-tint);
+}
+
 @media (max-width: 60rem) {
   .welcome {
     align-content: start;
     gap: var(--space-5);
   }
 
-  .copy {
+  .copy,
+  .stage {
     grid-column: 1 / -1;
+  }
+
+  /* Phone: name, then the film, then the promise and the button. */
+  .stage {
+    order: -1;
+  }
+
+  .copy {
+    order: -2;
   }
 }

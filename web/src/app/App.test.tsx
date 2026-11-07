@@ -204,31 +204,44 @@ describe('PillPlan app', () => {
 });
 
 describe('welcome intro', () => {
-  it('opens the app on Start, only once', async () => {
+  it('plays the film for the chosen language and opens the app on Start, only once', async () => {
     window.localStorage.clear();
     const user = userEvent.setup();
-    render(<App startup={startup({ welcome: true })} catalog={testCatalog} />);
+    const { container } = render(
+      <App startup={startup({ welcome: true })} catalog={testCatalog} />,
+    );
 
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
       /patient can actually follow/,
     );
+    const sources = [...container.querySelectorAll('video source')].map((s) =>
+      s.getAttribute('src'),
+    );
+    expect(sources).toEqual(['/intro/intro-en.webm', '/intro/intro-en.mp4']);
+    expect(container.querySelector('video')).toHaveAttribute('poster', '/intro/poster-en.png');
 
     await user.click(screen.getByRole('button', { name: 'Start a plan' }));
     expect(await screen.findByRole('combobox', { name: 'Find a medicine' })).toBeInTheDocument();
     expect(window.localStorage.getItem('pillplan:welcome-seen')).toBe('1');
   });
 
-  it('skips with Escape and replays from the navbar', async () => {
+  it('starts muted with a sound toggle, skips with Escape and replays from the navbar', async () => {
     const user = userEvent.setup();
     render(<App startup={startup({ welcome: true })} catalog={testCatalog} />);
 
+    expect(screen.getByRole('button', { name: 'Turn sound on' })).toHaveAttribute(
+      'aria-pressed',
+      'false',
+    );
     await user.keyboard('{Escape}');
     await user.click(await screen.findByRole('button', { name: /Intro/ }));
     expect(await screen.findByRole('button', { name: 'Start a plan' })).toBeInTheDocument();
   });
 
-  it('shows the welcome in Indonesian', () => {
-    render(<App startup={startup({ welcome: true, lang: 'id' })} catalog={testCatalog} />);
-    expect(screen.getByRole('button', { name: 'Mulai buat jadwal' })).toBeInTheDocument();
+  it('uses the Indonesian film in Indonesian', () => {
+    const { container } = render(
+      <App startup={startup({ welcome: true, lang: 'id' })} catalog={testCatalog} />,
+    );
+    expect(container.querySelector('source')).toHaveAttribute('src', '/intro/intro-id.webm');
   });
 });
