@@ -16,12 +16,12 @@
 
 .red {
   background: var(--sticker-red);
-  color: #fff;
+  color: var(--on-color);
 }
 
 .blue {
   background: var(--sticker-blue);
-  color: #fff;
+  color: var(--on-color);
 }
 
 .large {

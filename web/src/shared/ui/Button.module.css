@@ -33,7 +33,7 @@
 .primary {
   border-color: var(--amber);
   background: var(--amber);
-  color: #fff;
+  color: var(--on-color);
 }
 
 .primary:hover {

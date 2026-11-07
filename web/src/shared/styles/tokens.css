@@ -16,6 +16,9 @@
   --amber-dark: #8a4904;
   --amber-tint: #fbeedf;
   --line: #d4d4d0;
+  --on-color: #ffffff; /* text on amber and sticker colors */
+  --switch-off: #e2e2e0;
+  --tray: #f4f4f4; /* blister tray behind the tracker */
   --desk: #ececea;
   --grid: #e0e0dc;
   --grid-strong: #d8d8d3;

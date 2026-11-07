@@ -27,7 +27,7 @@
   border-spacing: 0;
   border: 2px solid var(--ink);
   border-radius: 10px;
-  background: #f4f4f4;
+  background: var(--tray);
   padding: var(--space-2);
   table-layout: fixed;
 }

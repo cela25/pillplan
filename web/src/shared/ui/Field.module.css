@@ -255,7 +255,7 @@ textarea.input {
   margin: 0;
   border: 1px solid var(--line);
   border-radius: 1rem;
-  background: #e2e2e0;
+  background: var(--switch-off);
   cursor: pointer;
   transition: background-color var(--dur-short) var(--ease-standard);
 }
