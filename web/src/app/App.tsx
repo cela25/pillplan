@@ -4,7 +4,7 @@ import { buildExamplePlan, MedicinePanel, PlanProvider, usePlan } from '@/featur
 import { SafetyNotes } from '@/features/safety';
 import { ChartSheet, toIsoDate } from '@/features/schedule';
 import { CalendarExport, StorageControls, usePersistence } from '@/features/storage';
-import { markWelcomeSeen, Welcome } from '@/features/welcome';
+import { Welcome } from '@/features/welcome';
 import { newId } from '@/shared/id';
 import { I18nProvider, useI18n } from '@/shared/i18n';
 import { Button } from '@/shared/ui/Button';
@@ -15,6 +15,7 @@ import { Tooltip } from '@/shared/ui/Tooltip';
 import { ToastProvider } from '@/shared/ui/Toast';
 import { withViewTransition } from '@/shared/viewTransition';
 import type { Catalog } from '@/features/catalog';
+import { useView, type View } from './route';
 import { readStartup, type Startup } from './startup';
 import { LanguageSwitch } from './LanguageSwitch';
 import { Wordmark } from '@/shared/ui/Wordmark';
@@ -45,31 +46,32 @@ export function App({ startup: given, catalog }: AppProps) {
 }
 
 /**
- * First visit: the welcome film, then the app. Leaving it runs one view transition, so the
- * mark at the end of the film glides into the navbar while the rest crossfades.
+ * The welcome film at "/", then the app at "/plan". Leaving the welcome runs one view
+ * transition, so the mark at the end of the film glides into the navbar while the rest crossfades.
  */
 function Entry({ startup }: { startup: Startup }) {
-  const [welcome, setWelcome] = useState(startup.welcome ?? false);
-  const leave = useCallback(() => {
-    markWelcomeSeen(startup.storage);
-    withViewTransition(() => setWelcome(false));
-  }, [startup.storage]);
-  const replay = useCallback(() => withViewTransition(() => setWelcome(true)), []);
+  const [view, go] = useView(startup.view);
+  const start = useCallback(() => go('plan'), [go]);
 
-  if (welcome) {
-    return <Welcome onDone={leave} />;
+  if (view === 'welcome') {
+    return <Welcome onDone={start} />;
   }
-  return <Shell startup={startup} onReplayIntro={replay} />;
+  return <Shell startup={startup} counseling={view === 'counsel'} onNavigate={go} />;
 }
 
-function Shell({ startup, onReplayIntro }: { startup: Startup; onReplayIntro: () => void }) {
+interface ShellProps {
+  startup: Startup;
+  counseling: boolean;
+  onNavigate: (view: View) => void;
+}
+
+function Shell({ startup, counseling, onNavigate }: ShellProps) {
   const { plan, dispatch } = usePlan();
   const catalog = useCatalog();
   const { t, lang } = useI18n();
   const searchRef = useRef<HTMLInputElement>(null);
   const [highlight, setHighlight] = useState<readonly string[]>([]);
   const persistence = usePersistence(plan, startup.storage);
-  const [counseling, setCounseling] = useState(startup.counsel);
   const [drawer, setDrawer] = useState(false);
   const demoDone = useRef(!startup.example);
   const today = toIsoDate(startup.today);
@@ -116,7 +118,7 @@ function Shell({ startup, onReplayIntro }: { startup: Startup; onReplayIntro: ()
           <LanguageSwitch />
           <span className={styles.divider} aria-hidden="true" />
           <Tooltip text={t.welcome.replayHint}>
-            <Button variant="nav" icon="play" onClick={onReplayIntro}>
+            <Button variant="nav" icon="play" onClick={() => onNavigate('welcome')}>
               {t.welcome.replay}
             </Button>
           </Tooltip>
@@ -125,7 +127,7 @@ function Shell({ startup, onReplayIntro }: { startup: Startup; onReplayIntro: ()
               variant="nav"
               icon="counsel"
               aria-disabled={!hasMedicines || undefined}
-              onClick={() => hasMedicines && setCounseling(true)}
+              onClick={() => hasMedicines && onNavigate('counsel')}
             >
               {t.app.counsel}
             </Button>
@@ -230,7 +232,7 @@ function Shell({ startup, onReplayIntro }: { startup: Startup; onReplayIntro: ()
 
       {counseling && hasMedicines && (
         <Suspense fallback={null}>
-          <CounselingMode onClose={() => setCounseling(false)} />
+          <CounselingMode onClose={() => onNavigate('plan')} />
         </Suspense>
       )}
     </div>

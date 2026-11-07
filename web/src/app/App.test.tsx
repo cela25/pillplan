@@ -16,7 +16,7 @@ function startup(patch: Partial<Startup> = {}): Startup {
     lang: 'en',
     invalidSaved: false,
     example: false,
-    counsel: false,
+    view: 'plan',
     ...patch,
   };
 }
@@ -94,7 +94,7 @@ describe('PillPlan app', () => {
 
   it('loads the example and steps through counseling mode', async () => {
     const user = userEvent.setup();
-    render(<App startup={startup({ example: true, counsel: true })} catalog={testCatalog} />);
+    render(<App startup={startup({ example: true, view: 'counsel' })} catalog={testCatalog} />);
 
     const dialog = await screen.findByRole('dialog', { name: 'Counseling mode' });
     expect(within(dialog).getByText('Medicine 1 of 5')).toBeInTheDocument();
@@ -204,11 +204,10 @@ describe('PillPlan app', () => {
 });
 
 describe('welcome intro', () => {
-  it('plays the film for the chosen language and opens the app on Start, only once', async () => {
-    window.localStorage.clear();
+  it('plays the film for the chosen language and opens the app at /plan on Start', async () => {
     const user = userEvent.setup();
     const { container } = render(
-      <App startup={startup({ welcome: true })} catalog={testCatalog} />,
+      <App startup={startup({ view: 'welcome' })} catalog={testCatalog} />,
     );
 
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
@@ -222,12 +221,12 @@ describe('welcome intro', () => {
 
     await user.click(screen.getByRole('button', { name: 'Start a plan' }));
     expect(await screen.findByRole('combobox', { name: 'Find a medicine' })).toBeInTheDocument();
-    expect(window.localStorage.getItem('pillplan:welcome-seen')).toBe('1');
+    expect(window.location.pathname).toBe('/plan');
   });
 
   it('starts muted with a sound toggle, skips with Escape and replays from the navbar', async () => {
     const user = userEvent.setup();
-    render(<App startup={startup({ welcome: true })} catalog={testCatalog} />);
+    render(<App startup={startup({ view: 'welcome' })} catalog={testCatalog} />);
 
     expect(screen.getByRole('button', { name: 'Turn sound on' })).toHaveAttribute(
       'aria-pressed',
@@ -240,8 +239,44 @@ describe('welcome intro', () => {
 
   it('uses the Indonesian film in Indonesian', () => {
     const { container } = render(
-      <App startup={startup({ welcome: true, lang: 'id' })} catalog={testCatalog} />,
+      <App startup={startup({ view: 'welcome', lang: 'id' })} catalog={testCatalog} />,
     );
     expect(container.querySelector('source')).toHaveAttribute('src', '/intro/intro-id.webm');
+  });
+
+  it('goes back to the welcome with the browser Back button, and forward again', async () => {
+    const user = userEvent.setup();
+    render(<App startup={startup({ view: 'welcome' })} catalog={testCatalog} />);
+
+    await user.click(screen.getByRole('button', { name: 'Start a plan' }));
+    await screen.findByRole('combobox', { name: 'Find a medicine' });
+
+    window.history.back();
+    expect(await screen.findByRole('button', { name: 'Start a plan' })).toBeInTheDocument();
+    expect(window.location.pathname).toBe('/');
+
+    window.history.forward();
+    expect(await screen.findByRole('combobox', { name: 'Find a medicine' })).toBeInTheDocument();
+  });
+
+  it('closes counseling mode with Back and keeps the history short when it is closed', async () => {
+    const user = userEvent.setup();
+    render(<App startup={startup({ example: true })} catalog={testCatalog} />);
+
+    await screen.findByRole('rowheader', { name: /Metformin/ });
+    const before = window.history.length;
+    await user.click(screen.getByRole('button', { name: 'Counseling mode' }));
+    await screen.findByRole('dialog', { name: 'Counseling mode' });
+    expect(window.location.pathname).toBe('/plan/counsel');
+
+    window.history.back();
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+    expect(window.location.pathname).toBe('/plan');
+
+    await user.click(screen.getByRole('button', { name: 'Counseling mode' }));
+    const dialog = await screen.findByRole('dialog', { name: 'Counseling mode' });
+    await user.click(within(dialog).getByRole('button', { name: 'Close' }));
+    await waitFor(() => expect(window.location.pathname).toBe('/plan'));
+    expect(window.history.length).toBe(before + 1);
   });
 });

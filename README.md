@@ -2,7 +2,18 @@
 
 A counter tool for the apoteker: type the prescription signa (for example `3 dd 1 tab p.c.`), and PillPlan checks the plan and turns it into one clear picture chart, a counseling view and phone reminders, in English or Indonesian.
 
-**Live:** https://pillplan-ancela.netlify.app (try `?example` or `?example&lang=id`)
+**Live:** https://pillplan-ancela.netlify.app
+
+| Address | Screen |
+| --- | --- |
+| https://pillplan-ancela.netlify.app/ | Welcome film, every visit |
+| https://pillplan-ancela.netlify.app/plan | Medicine chart |
+| https://pillplan-ancela.netlify.app/plan/counsel | Counseling mode |
+| https://pillplan-ancela.netlify.app/?example | Chart with a made-up patient (`&lang=id` for Indonesian) |
+
+The browser Back and Forward buttons move between these screens.
+
+**Source:** https://github.com/cela25/pillplan
 
 ## What it does
 
