@@ -1,0 +1,25 @@
+.dialog {
+  width: min(28rem, calc(100% - 2rem));
+  padding: var(--space-5);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.dialog::backdrop {
+  background: rgb(20 20 20 / 0.55);
+}
+
+.dialog h2 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-3);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}

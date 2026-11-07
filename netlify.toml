@@ -1,0 +1,9 @@
+# Netlify build settings. Security headers live in web/public/_headers,
+# so they also apply to drag-and-drop and CLI deploys.
+[build]
+  base = "web"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

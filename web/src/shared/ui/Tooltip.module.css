@@ -1,0 +1,90 @@
+.anchor {
+  position: relative;
+  display: inline-flex;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.block > :first-child {
+  flex: 1;
+}
+
+.tip {
+  position: absolute;
+  left: 50%;
+  z-index: 30;
+  width: max-content;
+  max-width: 16rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 2px);
+  transition:
+    opacity var(--dur-short) var(--ease-enter),
+    transform var(--dur-short) var(--ease-enter),
+    visibility 0s linear var(--dur-short);
+}
+
+.tip[data-placement='below'] {
+  top: calc(100% + 8px);
+}
+
+.tip[data-placement='above'] {
+  bottom: calc(100% + 8px);
+  transform: translate(-50%, -2px);
+}
+
+/* Small arrow pointing at the control. */
+.tip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tip[data-placement='below']::before {
+  top: -4px;
+}
+
+.tip[data-placement='above']::before {
+  bottom: -4px;
+}
+
+.tip[data-open] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition:
+    opacity var(--dur-short) var(--ease-enter),
+    transform var(--dur-short) var(--ease-enter),
+    visibility 0s;
+}
+
+/* No hover on touch screens, so no tooltips there. */
+@media (hover: none) {
+  .tip {
+    display: none;
+  }
+}
+
+@media print {
+  .tip {
+    display: none;
+  }
+}

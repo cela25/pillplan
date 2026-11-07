@@ -1,0 +1,44 @@
+id,name,usual_max_daily,unit,source
+allopurinol,Allopurinol,800,mg,FDA label (DailyMed)
+amlodipine,Amlodipine,10,mg,FDA label (DailyMed)
+amoxicillin,Amoxicillin,,mg,FDA label (DailyMed)
+aspirin,Aspirin,325,mg,FDA label (DailyMed); antiplatelet dosing
+atenolol,Atenolol,200,mg,FDA label (DailyMed)
+atorvastatin,Atorvastatin,80,mg,FDA label (DailyMed)
+azithromycin,Azithromycin,,mg,FDA label (DailyMed)
+bisoprolol,Bisoprolol,20,mg,FDA label (DailyMed)
+caffeine,Caffeine,,mg,Not checked
+cetirizine,Cetirizine,10,mg,FDA label (DailyMed)
+chlorphenamine,Chlorphenamine,24,mg,FDA OTC monograph
+ciprofloxacin,Ciprofloxacin,1500,mg,FDA label (DailyMed)
+clopidogrel,Clopidogrel,75,mg,FDA label (DailyMed); maintenance dose
+diazepam,Diazepam,40,mg,FDA label (DailyMed)
+doxycycline,Doxycycline,200,mg,FDA label (DailyMed)
+empagliflozin,Empagliflozin,25,mg,FDA label (DailyMed)
+enalapril,Enalapril,40,mg,FDA label (DailyMed)
+famotidine,Famotidine,80,mg,FDA label (DailyMed)
+fluoxetine,Fluoxetine,80,mg,FDA label (DailyMed)
+furosemide,Furosemide,,mg,FDA label (DailyMed)
+gabapentin,Gabapentin,3600,mg,FDA label (DailyMed)
+glipizide,Glipizide,40,mg,FDA label (DailyMed)
+hydrochlorothiazide,Hydrochlorothiazide,100,mg,FDA label (DailyMed)
+ibuprofen,Ibuprofen,3200,mg,FDA label (DailyMed); prescription dosing
+levothyroxine,Levothyroxine,,mcg,FDA label (DailyMed)
+loratadine,Loratadine,10,mg,FDA label (DailyMed)
+lorazepam,Lorazepam,10,mg,FDA label (DailyMed)
+losartan,Losartan,100,mg,FDA label (DailyMed)
+metformin,Metformin,2550,mg,FDA label (DailyMed); immediate release
+metronidazole,Metronidazole,,mg,FDA label (DailyMed)
+montelukast,Montelukast,10,mg,FDA label (DailyMed)
+naproxen,Naproxen,1500,mg,FDA label (DailyMed)
+omeprazole,Omeprazole,40,mg,FDA label (DailyMed); excludes Zollinger-Ellison
+pantoprazole,Pantoprazole,40,mg,FDA label (DailyMed); excludes Zollinger-Ellison
+paracetamol,Paracetamol,4000,mg,FDA OTC monograph
+prednisone,Prednisone,,mg,FDA label (DailyMed)
+rosuvastatin,Rosuvastatin,40,mg,FDA label (DailyMed)
+sertraline,Sertraline,200,mg,FDA label (DailyMed)
+simvastatin,Simvastatin,40,mg,FDA label (DailyMed); 80 mg is restricted
+sitagliptin,Sitagliptin,100,mg,FDA label (DailyMed)
+tamsulosin,Tamsulosin,0.8,mg,FDA label (DailyMed)
+tramadol,Tramadol,400,mg,FDA label (DailyMed)
+warfarin,Warfarin,,mg,FDA label (DailyMed)

@@ -1,0 +1,21 @@
+.heading {
+  font-size: var(--step-1);
+}
+
+.hint {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  margin-bottom: var(--space-2);
+}
+
+.list {
+  border-top: 1px solid var(--rule);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+}

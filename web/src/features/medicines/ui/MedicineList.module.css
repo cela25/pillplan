@@ -1,0 +1,88 @@
+.heading {
+  font-size: var(--step-0);
+  margin-bottom: var(--space-2);
+}
+
+.empty {
+  color: var(--ink-muted);
+}
+
+.list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.dragging {
+  position: relative;
+  z-index: 2;
+  background: var(--paper);
+  outline: 2px solid var(--ink);
+}
+
+.handle {
+  display: grid;
+  place-items: center;
+  width: var(--target);
+  height: var(--target);
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: grab;
+  touch-action: none;
+}
+
+.handle:hover {
+  background: rgb(0 0 0 / 0.07);
+  color: var(--ink);
+}
+
+.name {
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.summary {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+@media (max-width: 30rem) {
+  .item {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .item > svg {
+    display: none;
+  }
+
+  .actionText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}
+
+.signa {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  font-style: italic;
+}

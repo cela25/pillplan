@@ -1,0 +1,336 @@
+.sheet {
+  max-width: 52rem;
+  padding: var(--space-6);
+  border: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom: 3px solid var(--ink);
+}
+
+.header h2 {
+  font-size: var(--step-3);
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 var(--space-3);
+  font-size: var(--step--1);
+}
+
+.meta dt {
+  color: var(--ink-muted);
+}
+
+.meta dd {
+  font-weight: 700;
+  min-width: 10rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.chart {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.chart caption {
+  text-align: left;
+}
+
+.chart thead th {
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 2px solid var(--ink);
+  font-size: var(--step--1);
+  text-align: center;
+}
+
+.chart thead th:first-child {
+  width: 46%;
+  text-align: left;
+}
+
+.chart thead th {
+  vertical-align: top;
+}
+
+.chart thead th:first-child {
+  vertical-align: bottom;
+}
+
+.slotHead {
+  display: grid;
+  grid-template-rows: 28px auto;
+  justify-items: center;
+  align-items: end;
+  gap: 4px;
+}
+
+.slotLabel {
+  white-space: nowrap;
+  line-height: 1.2;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.chart tbody th,
+.chart tbody td {
+  padding: var(--space-3) var(--space-1);
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+}
+
+.chart tbody th {
+  font-weight: 400;
+  text-align: left;
+}
+
+.chart td {
+  text-align: center;
+  border-left: 1px solid var(--rule);
+}
+
+.medicine {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-1) var(--space-3);
+  align-items: start;
+}
+
+.name {
+  font-weight: 700;
+  font-size: var(--step-1);
+  line-height: 1.2;
+}
+
+.strength {
+  font-weight: 400;
+  font-size: var(--step-0);
+}
+
+.purpose,
+.food,
+.advice {
+  font-size: var(--step--1);
+}
+
+.purpose {
+  font-weight: 700;
+}
+
+.food {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.advice {
+  color: var(--ink-muted);
+}
+
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.dose {
+  display: grid;
+  justify-items: center;
+  line-height: 1.1;
+  animation: stamp var(--dur-medium) var(--ease-enter) both;
+  animation-delay: calc((var(--row, 0) + var(--column, 0)) * var(--stagger) + var(--dur-medium));
+}
+
+/* The one orchestrated moment: the chart prints like a label printer.
+   Each row is revealed left to right, one after another, then its doses stamp. */
+.chart tbody tr > *,
+.prn li {
+  animation: print-row var(--dur-long) var(--ease-enter) both;
+  animation-delay: calc(var(--row, 0) * var(--stagger));
+}
+
+@keyframes print-row {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+/* A dose is pressed onto the label like a pharmacy stamp. */
+@keyframes stamp {
+  from {
+    opacity: 0;
+    transform: scale(1.2) rotate(-3deg);
+  }
+}
+
+.amount {
+  font-family: var(--font-mono);
+  font-size: var(--step-2);
+  font-weight: 700;
+}
+
+.formName {
+  font-size: var(--step--1);
+}
+
+.empty {
+  color: var(--rule);
+  font-size: var(--step-1);
+}
+
+/* A safety note points at its medicines: those rows are outlined, the rest fade. */
+.sheet[data-linking] tbody tr:not([data-linked]),
+.sheet[data-linking] .prn li:not([data-linked]) {
+  opacity: 0.35;
+}
+
+.sheet tbody tr,
+.sheet .prn li {
+  transition: opacity var(--dur-short) var(--ease-standard);
+}
+
+.sheet[data-linking] tbody tr[data-linked],
+.sheet[data-linking] .prn li[data-linked] {
+  background: var(--amber-tint);
+}
+
+/* Spotlight: dim every other time of day and the medicines not due then. */
+.chart[data-spot] td:not([data-on]),
+.chart[data-spot] thead th:not(:first-child):not([data-on]) {
+  opacity: 0.3;
+}
+
+.chart[data-spot] td[data-on],
+.chart[data-spot] thead th[data-on] {
+  background: var(--highlight);
+}
+
+.chart[data-spot] tr[data-off] th {
+  opacity: 0.3;
+}
+
+.prn {
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--ink);
+  break-inside: avoid;
+}
+
+.prn h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--step-1);
+  margin-bottom: var(--space-2);
+}
+
+.prn li + li {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--rule);
+}
+
+.prnLine {
+  margin-top: var(--space-1);
+  font-weight: 700;
+}
+
+.blank {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-3);
+  padding: var(--space-6) 0;
+}
+
+.blank h3 {
+  font-size: var(--step-2);
+}
+
+.footer {
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--ink);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+@media (max-width: 40rem) {
+  .sheet {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .chart thead th:first-child {
+    width: 40%;
+  }
+
+  .slotLabel {
+    font-size: 0.75rem;
+  }
+
+  .medicine {
+    grid-template-columns: 1fr;
+  }
+
+  .medicine > svg {
+    display: none;
+  }
+
+  .name {
+    font-size: var(--step-0);
+  }
+
+  .amount {
+    font-size: var(--step-1);
+  }
+}
+
+@media print {
+  .dose,
+  .chart tbody tr > *,
+  .prn li {
+    animation: none;
+  }
+
+  .sheet {
+    max-width: none;
+    padding: 0;
+    border: 0;
+  }
+
+  .chart tbody th,
+  .chart tbody td {
+    padding: 6pt 3pt;
+  }
+
+  .chart tr {
+    break-inside: avoid;
+  }
+
+  .chart thead th {
+    font-size: 9pt;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.every {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 700;
+}

@@ -1,0 +1,169 @@
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.dialog::backdrop {
+  background: var(--ink);
+}
+
+.frame {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: var(--space-5);
+  gap: var(--space-5);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.progress {
+  font-weight: 700;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+}
+
+.dot[data-current] {
+  background: var(--ink);
+}
+
+.body {
+  display: grid;
+  align-content: start;
+  gap: var(--space-5);
+  font-size: var(--step-1);
+}
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.title h2 {
+  font-size: clamp(var(--step-2), 6vw, 3rem);
+  outline: none;
+}
+
+.strength {
+  display: block;
+  font-size: var(--step-1);
+  font-weight: 400;
+}
+
+.label {
+  color: var(--ink-muted);
+  font-size: var(--step-0);
+  font-weight: 700;
+}
+
+.times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  font-weight: 700;
+}
+
+.stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--ink);
+}
+
+/* Direction-aware page turn between medicines (View Transitions). */
+::view-transition-old(counsel-body) {
+  animation: counsel-out var(--dur-medium) var(--ease-exit) both;
+}
+
+::view-transition-new(counsel-body) {
+  animation: counsel-in var(--dur-medium) var(--ease-enter) both;
+}
+
+:root[data-counsel-direction='back']::view-transition-old(counsel-body) {
+  animation-name: counsel-out-back;
+}
+
+:root[data-counsel-direction='back']::view-transition-new(counsel-body) {
+  animation-name: counsel-in-back;
+}
+
+@keyframes counsel-out {
+  to {
+    opacity: 0;
+    transform: translateX(-12%);
+  }
+}
+
+@keyframes counsel-in {
+  from {
+    opacity: 0;
+    transform: translateX(12%);
+  }
+}
+
+@keyframes counsel-out-back {
+  to {
+    opacity: 0;
+    transform: translateX(12%);
+  }
+}
+
+@keyframes counsel-in-back {
+  from {
+    opacity: 0;
+    transform: translateX(-12%);
+  }
+}
+
+.when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.when .time {
+  font-size: var(--step-2);
+}

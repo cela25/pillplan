@@ -1,0 +1,12 @@
+.panel {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.own {
+  justify-self: start;
+  margin-top: calc(var(--space-2) * -1);
+  color: var(--amber-dark);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

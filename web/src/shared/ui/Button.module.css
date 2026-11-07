@@ -1,0 +1,151 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--target);
+  min-width: var(--target);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.1;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color var(--dur-short) var(--ease-standard),
+    background-color var(--dur-short) var(--ease-standard),
+    color var(--dur-short) var(--ease-standard),
+    transform var(--dur-short) var(--ease-standard);
+}
+
+.button:hover {
+  border-color: var(--ink);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.primary {
+  border-color: var(--amber);
+  background: var(--amber);
+  color: #fff;
+}
+
+.primary:hover {
+  border-color: var(--amber-dark);
+  background: var(--amber-dark);
+}
+
+.quiet {
+  border-color: transparent;
+  background: transparent;
+  padding: 0 var(--space-2);
+}
+
+.quiet:hover {
+  border-color: transparent;
+  background: rgb(0 0 0 / 0.06);
+}
+
+.danger {
+  color: var(--alert);
+}
+
+.danger:hover {
+  border-color: var(--alert);
+}
+
+.button:disabled,
+.button[aria-disabled='true'] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.button[aria-disabled='true']:hover,
+.button[aria-disabled='true']:active {
+  transform: none;
+}
+
+.nav[aria-disabled='true']::after {
+  transform: scaleX(0);
+}
+
+.button:disabled:hover {
+  border-color: var(--line);
+}
+
+/* Navbar buttons: no box. A 2px ink line grows from the left on hover and focus,
+   and each icon answers in its own way (see the icon rules below). */
+.nav {
+  position: relative;
+  border-color: transparent;
+  background: transparent;
+  padding: 0 var(--space-3);
+}
+
+.nav::after {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: 6px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--dur-medium) var(--ease-standard);
+}
+
+.nav:hover,
+.nav:focus-visible {
+  border-color: transparent;
+  background: transparent;
+}
+
+.nav:hover::after,
+.nav:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.nav:disabled::after {
+  transform: scaleX(0);
+}
+
+/* Icon answers: the printer feeds paper, the speech bubble pops, the dots spread. */
+.button :global(.icon-paper),
+.button :global(.icon-bubble),
+.button :global(.icon-dot-left),
+.button :global(.icon-dot-right) {
+  transition: transform var(--dur-medium) var(--ease-standard);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.button:hover:not(:disabled) :global(.icon-paper),
+.button:focus-visible :global(.icon-paper) {
+  transform: translateY(-2px);
+}
+
+.button:active:not(:disabled) :global(.icon-paper) {
+  transform: translateY(2px);
+}
+
+.button:hover:not(:disabled) :global(.icon-bubble),
+.button:focus-visible :global(.icon-bubble) {
+  transform: translate(1px, -1px) scale(1.12);
+}
+
+.button:hover:not(:disabled) :global(.icon-dot-left),
+.button:focus-visible :global(.icon-dot-left) {
+  transform: translateX(-2px);
+}
+
+.button:hover:not(:disabled) :global(.icon-dot-right),
+.button:focus-visible :global(.icon-dot-right) {
+  transform: translateX(2px);
+}

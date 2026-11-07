@@ -1,0 +1,15 @@
+.stage {
+  flex: none;
+  cursor: grab;
+  touch-action: none;
+}
+
+.stage:active {
+  cursor: grabbing;
+}
+
+@media print {
+  .stage {
+    display: none;
+  }
+}

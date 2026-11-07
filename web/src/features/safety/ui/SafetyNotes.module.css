@@ -1,0 +1,139 @@
+/* No coloured stripes: severity is carried by the icon and the title colour. */
+.strip {
+  max-width: 52rem;
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.ok {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+.ok svg {
+  color: var(--ok);
+}
+
+.okButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.25em;
+  cursor: help;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--target);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-standard);
+}
+
+.toggle:hover {
+  background: rgb(0 0 0 / 0.03);
+}
+
+.alert .toggle > svg:first-child,
+.note.alert svg,
+.note.alert .title {
+  color: var(--alert);
+}
+
+.caution .toggle > svg:first-child,
+.note.caution svg,
+.note.caution .title {
+  color: var(--caution);
+}
+
+.info .toggle > svg:first-child,
+.note.info svg,
+.note.info .title {
+  color: var(--sticker-blue);
+}
+
+.count {
+  flex: 1;
+  animation: count-in var(--dur-medium) var(--ease-enter);
+}
+
+.chevron {
+  color: var(--ink-muted);
+  transition: transform var(--dur-medium) var(--ease-standard);
+}
+
+.toggle[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.list {
+  padding: 0 var(--space-3) var(--space-2);
+  animation: open var(--dur-medium) var(--ease-enter);
+}
+
+.note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px var(--space-2);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--line);
+  cursor: default;
+  transition: background-color var(--dur-short) var(--ease-standard);
+}
+
+.note:hover,
+.note:focus-visible {
+  background: rgb(0 0 0 / 0.025);
+}
+
+.note svg {
+  grid-row: span 2;
+  margin-top: 2px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 0.94rem;
+}
+
+.detail,
+.footnote {
+  font-size: var(--step--1);
+}
+
+.footnote {
+  padding: var(--space-2) 0 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+}
+
+@keyframes count-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}

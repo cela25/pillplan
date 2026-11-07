@@ -1,0 +1,148 @@
+.clock {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.dial {
+  max-width: 100%;
+  height: auto;
+  touch-action: none;
+  user-select: none;
+}
+
+.dial[data-editable] {
+  cursor: grab;
+}
+
+.clock[data-dragging] .dial {
+  cursor: grabbing;
+}
+
+.ring {
+  fill: var(--paper);
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.day,
+.night {
+  fill: none;
+  stroke-width: 10;
+}
+
+.day {
+  stroke: var(--amber-tint);
+}
+
+.night {
+  stroke: var(--desk);
+}
+
+.tick {
+  stroke: var(--ink-muted);
+  stroke-width: 1;
+}
+
+.hour {
+  fill: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.doses {
+  transform-origin: 120px 120px;
+  transition: transform var(--dur-medium) var(--ease-standard);
+}
+
+/* While dragging the dial follows the finger directly. */
+.clock[data-dragging] .doses {
+  transition: none;
+}
+
+.shape {
+  fill: color-mix(in srgb, var(--amber) 12%, transparent);
+  stroke: var(--amber);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.dot {
+  fill: var(--amber);
+  stroke: var(--paper);
+  stroke-width: 2.5;
+}
+
+.hit {
+  fill: transparent;
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.handle {
+  outline: none;
+}
+
+.handle:focus-visible .hit {
+  stroke: var(--ink);
+  stroke-width: 3;
+  stroke-dasharray: 4 3;
+}
+
+.every {
+  fill: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.count {
+  fill: var(--ink-muted);
+  font-size: 12px;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.times {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.time {
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.time[data-first] {
+  border-color: var(--amber);
+  background: var(--amber-tint);
+}
+
+.next {
+  margin-left: 2px;
+  color: var(--ink-muted);
+  font-size: 0.65em;
+}
+
+.hint {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+  text-align: center;
+}
+
+@media print {
+  .hint {
+    display: none;
+  }
+}

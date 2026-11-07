@@ -1,0 +1,106 @@
+.tracker {
+  margin-top: var(--space-5);
+  break-inside: avoid;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.head h3 {
+  font-size: var(--step-1);
+}
+
+.hint {
+  color: var(--ink-muted);
+  font-size: var(--step--1);
+}
+
+.pack {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  background: #f4f4f4;
+  padding: var(--space-2);
+  table-layout: fixed;
+}
+
+.pack th {
+  font-size: var(--step--1);
+  font-weight: 700;
+  padding: 2px;
+}
+
+.pack th[scope='row'] {
+  text-align: left;
+  width: 6.5rem;
+}
+
+.rowLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pack td {
+  text-align: center;
+  padding: 3px 0;
+}
+
+.bubble {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 2px solid var(--ink-muted);
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.08);
+  color: var(--amber);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.bubble[aria-pressed='true'] {
+  border-style: dashed;
+  border-color: var(--amber);
+  background: transparent;
+  box-shadow: none;
+  animation: pop var(--dur-short) var(--ease-enter);
+}
+
+@keyframes pop {
+  40% {
+    transform: scale(0.82);
+  }
+}
+
+@media (max-width: 30rem) {
+  .pack th[scope='row'] {
+    width: 2.2rem;
+  }
+
+  .rowText {
+    font-size: 0.7rem;
+  }
+
+  .bubble {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.reset {
+  margin-top: var(--space-2);
+}
+
+.rowText {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

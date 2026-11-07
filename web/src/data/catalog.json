@@ -1,0 +1,2424 @@
+{
+  "version": 1,
+  "warnings": [
+    {
+      "id": "alcohol",
+      "short": {
+        "en": "No alcohol",
+        "id": "Hindari alkohol"
+      },
+      "text": {
+        "en": "Avoid alcohol while taking this medicine.",
+        "id": "Hindari alkohol selama minum obat ini."
+      },
+      "icon": "alcohol",
+      "sticker": "red"
+    },
+    {
+      "id": "course",
+      "short": {
+        "en": "Finish the course",
+        "id": "Habiskan obatnya"
+      },
+      "text": {
+        "en": "Finish the whole course even if you feel better.",
+        "id": "Habiskan seluruh obat walaupun sudah merasa lebih baik."
+      },
+      "icon": "course",
+      "sticker": "blue"
+    },
+    {
+      "id": "dont_stop",
+      "short": {
+        "en": "Do not stop suddenly",
+        "id": "Jangan berhenti mendadak"
+      },
+      "text": {
+        "en": "Do not stop taking this suddenly. Ask your doctor or pharmacist first.",
+        "id": "Jangan berhenti minum obat ini secara mendadak. Tanyakan dokter atau apoteker terlebih dahulu."
+      },
+      "icon": "dont_stop",
+      "sticker": "red"
+    },
+    {
+      "id": "drowsy",
+      "short": {
+        "en": "May cause sleepiness",
+        "id": "Dapat menyebabkan kantuk"
+      },
+      "text": {
+        "en": "May make you sleepy. Do not drive if affected.",
+        "id": "Dapat membuat mengantuk. Jangan mengemudi jika terpengaruh."
+      },
+      "icon": "drowsy",
+      "sticker": "yellow"
+    },
+    {
+      "id": "fridge",
+      "short": {
+        "en": "Keep in fridge",
+        "id": "Simpan di kulkas"
+      },
+      "text": {
+        "en": "Keep in the fridge. Do not freeze.",
+        "id": "Simpan di kulkas. Jangan dibekukan."
+      },
+      "icon": "fridge",
+      "sticker": "blue"
+    },
+    {
+      "id": "shake",
+      "short": {
+        "en": "Shake well",
+        "id": "Kocok dahulu"
+      },
+      "text": {
+        "en": "Shake the bottle well before each use.",
+        "id": "Kocok botol dengan baik sebelum setiap pemakaian."
+      },
+      "icon": "shake",
+      "sticker": "blue"
+    },
+    {
+      "id": "sun",
+      "short": {
+        "en": "Avoid strong sun",
+        "id": "Hindari sinar matahari terik"
+      },
+      "text": {
+        "en": "Avoid strong sunlight and sunbeds. Use sunscreen.",
+        "id": "Hindari sinar matahari terik. Gunakan tabir surya."
+      },
+      "icon": "sun",
+      "sticker": "yellow"
+    },
+    {
+      "id": "water",
+      "short": {
+        "en": "Full glass of water",
+        "id": "Dengan segelas air"
+      },
+      "text": {
+        "en": "Take with a full glass of water.",
+        "id": "Minum dengan segelas air penuh."
+      },
+      "icon": "water",
+      "sticker": "blue"
+    },
+    {
+      "id": "whole",
+      "short": {
+        "en": "Swallow whole",
+        "id": "Telan utuh"
+      },
+      "text": {
+        "en": "Swallow whole. Do not crush or chew.",
+        "id": "Telan utuh. Jangan dihancurkan atau dikunyah."
+      },
+      "icon": "whole",
+      "sticker": "blue"
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "allopurinol",
+      "name": "Allopurinol",
+      "usualMaxDaily": 800.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "amlodipine",
+      "name": "Amlodipine",
+      "usualMaxDaily": 10.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "amoxicillin",
+      "name": "Amoxicillin",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "aspirin",
+      "name": "Aspirin",
+      "usualMaxDaily": 325.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); antiplatelet dosing"
+    },
+    {
+      "id": "atenolol",
+      "name": "Atenolol",
+      "usualMaxDaily": 200.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "atorvastatin",
+      "name": "Atorvastatin",
+      "usualMaxDaily": 80.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "bisoprolol",
+      "name": "Bisoprolol",
+      "usualMaxDaily": 20.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "caffeine",
+      "name": "Caffeine",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "Not checked"
+    },
+    {
+      "id": "cetirizine",
+      "name": "Cetirizine",
+      "usualMaxDaily": 10.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "chlorphenamine",
+      "name": "Chlorphenamine",
+      "usualMaxDaily": 24.0,
+      "unit": "mg",
+      "source": "FDA OTC monograph"
+    },
+    {
+      "id": "ciprofloxacin",
+      "name": "Ciprofloxacin",
+      "usualMaxDaily": 1500.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "clopidogrel",
+      "name": "Clopidogrel",
+      "usualMaxDaily": 75.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); maintenance dose"
+    },
+    {
+      "id": "diazepam",
+      "name": "Diazepam",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "doxycycline",
+      "name": "Doxycycline",
+      "usualMaxDaily": 200.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "empagliflozin",
+      "name": "Empagliflozin",
+      "usualMaxDaily": 25.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "enalapril",
+      "name": "Enalapril",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "famotidine",
+      "name": "Famotidine",
+      "usualMaxDaily": 80.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "fluoxetine",
+      "name": "Fluoxetine",
+      "usualMaxDaily": 80.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "gabapentin",
+      "name": "Gabapentin",
+      "usualMaxDaily": 3600.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "glipizide",
+      "name": "Glipizide",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "hydrochlorothiazide",
+      "name": "Hydrochlorothiazide",
+      "usualMaxDaily": 100.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "ibuprofen",
+      "name": "Ibuprofen",
+      "usualMaxDaily": 3200.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); prescription dosing"
+    },
+    {
+      "id": "levothyroxine",
+      "name": "Levothyroxine",
+      "usualMaxDaily": null,
+      "unit": "mcg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "loratadine",
+      "name": "Loratadine",
+      "usualMaxDaily": 10.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "usualMaxDaily": 10.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "losartan",
+      "name": "Losartan",
+      "usualMaxDaily": 100.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "metformin",
+      "name": "Metformin",
+      "usualMaxDaily": 2550.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); immediate release"
+    },
+    {
+      "id": "metronidazole",
+      "name": "Metronidazole",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "montelukast",
+      "name": "Montelukast",
+      "usualMaxDaily": 10.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "naproxen",
+      "name": "Naproxen",
+      "usualMaxDaily": 1500.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "omeprazole",
+      "name": "Omeprazole",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); excludes Zollinger-Ellison"
+    },
+    {
+      "id": "pantoprazole",
+      "name": "Pantoprazole",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); excludes Zollinger-Ellison"
+    },
+    {
+      "id": "paracetamol",
+      "name": "Paracetamol",
+      "usualMaxDaily": 4000.0,
+      "unit": "mg",
+      "source": "FDA OTC monograph"
+    },
+    {
+      "id": "prednisone",
+      "name": "Prednisone",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "rosuvastatin",
+      "name": "Rosuvastatin",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "sertraline",
+      "name": "Sertraline",
+      "usualMaxDaily": 200.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "simvastatin",
+      "name": "Simvastatin",
+      "usualMaxDaily": 40.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed); 80 mg is restricted"
+    },
+    {
+      "id": "sitagliptin",
+      "name": "Sitagliptin",
+      "usualMaxDaily": 100.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "tamsulosin",
+      "name": "Tamsulosin",
+      "usualMaxDaily": 0.8,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "tramadol",
+      "name": "Tramadol",
+      "usualMaxDaily": 400.0,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "warfarin",
+      "name": "Warfarin",
+      "usualMaxDaily": null,
+      "unit": "mg",
+      "source": "FDA label (DailyMed)"
+    }
+  ],
+  "drugs": [
+    {
+      "id": "allopurinol",
+      "name": "Allopurinol",
+      "aliases": [
+        "alopurinol"
+      ],
+      "brands": [
+        "Zyloprim"
+      ],
+      "ingredients": [
+        "allopurinol"
+      ],
+      "drugClass": {
+        "en": "Xanthine oxidase inhibitor",
+        "id": "Penghambat xantin oksidase"
+      },
+      "area": {
+        "en": "Other",
+        "id": "Lainnya"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          100.0
+        ],
+        [
+          300.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [
+        "water"
+      ],
+      "advice": {
+        "en": "Take after food. Drink plenty of water during the day.",
+        "id": "Minum setelah makan. Minum banyak air sepanjang hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "amlodipine",
+      "name": "Amlodipine",
+      "aliases": [
+        "amlodipin"
+      ],
+      "brands": [
+        "Norvasc"
+      ],
+      "ingredients": [
+        "amlodipine"
+      ],
+      "drugClass": {
+        "en": "Calcium channel blocker",
+        "id": "Penghambat kanal kalsium"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          2.5
+        ],
+        [
+          5.0
+        ],
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take at the same time each day.",
+        "id": "Minum pada jam yang sama setiap hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "amoxicillin",
+      "name": "Amoxicillin",
+      "aliases": [
+        "amoksisilin"
+      ],
+      "brands": [
+        "Amoxil"
+      ],
+      "ingredients": [
+        "amoxicillin"
+      ],
+      "drugClass": {
+        "en": "Penicillin antibiotic",
+        "id": "Antibiotik penisilin"
+      },
+      "area": {
+        "en": "Infection",
+        "id": "Infeksi"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          250.0
+        ],
+        [
+          500.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "noon",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "course"
+      ],
+      "advice": {
+        "en": "Space the doses evenly through the day.",
+        "id": "Beri jarak waktu yang sama antar dosis sepanjang hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "aspirin_low",
+      "name": "Aspirin (low dose)",
+      "aliases": [],
+      "brands": [
+        "Bayer Low Dose"
+      ],
+      "ingredients": [
+        "aspirin"
+      ],
+      "drugClass": {
+        "en": "Antiplatelet (aspirin)",
+        "id": "Antiplatelet (aspirin)"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          75.0
+        ],
+        [
+          81.0
+        ],
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [],
+      "advice": {
+        "en": "Take with food to protect the stomach.",
+        "id": "Minum bersama makanan untuk melindungi lambung."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "atenolol",
+      "name": "Atenolol",
+      "aliases": [],
+      "brands": [
+        "Tenormin"
+      ],
+      "ingredients": [
+        "atenolol"
+      ],
+      "drugClass": {
+        "en": "Beta-blocker",
+        "id": "Penyekat beta"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          25.0
+        ],
+        [
+          50.0
+        ],
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Take at the same time each day.",
+        "id": "Minum pada jam yang sama setiap hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "atorvastatin",
+      "name": "Atorvastatin",
+      "aliases": [],
+      "brands": [
+        "Lipitor"
+      ],
+      "ingredients": [
+        "atorvastatin"
+      ],
+      "drugClass": {
+        "en": "Statin",
+        "id": "Statin"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ],
+        [
+          20.0
+        ],
+        [
+          40.0
+        ],
+        [
+          80.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Can be taken at any time of day.",
+        "id": "Dapat diminum kapan saja dalam sehari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "azithromycin",
+      "name": "Azithromycin",
+      "aliases": [
+        "azitromisin"
+      ],
+      "brands": [
+        "Zithromax"
+      ],
+      "ingredients": [
+        "azithromycin"
+      ],
+      "drugClass": {
+        "en": "Macrolide antibiotic",
+        "id": "Antibiotik makrolida"
+      },
+      "area": {
+        "en": "Infection",
+        "id": "Infeksi"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          250.0
+        ],
+        [
+          500.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "course"
+      ],
+      "advice": {
+        "en": "Take once a day at the same time.",
+        "id": "Minum sekali sehari pada jam yang sama."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "bisoprolol",
+      "name": "Bisoprolol",
+      "aliases": [],
+      "brands": [
+        "Zebeta",
+        "Concor"
+      ],
+      "ingredients": [
+        "bisoprolol"
+      ],
+      "drugClass": {
+        "en": "Beta-blocker",
+        "id": "Penyekat beta"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          2.5
+        ],
+        [
+          5.0
+        ],
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Take in the morning at the same time each day.",
+        "id": "Minum pada pagi hari di jam yang sama setiap hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "cetirizine",
+      "name": "Cetirizine",
+      "aliases": [
+        "setirizin"
+      ],
+      "brands": [
+        "Zyrtec"
+      ],
+      "ingredients": [
+        "cetirizine"
+      ],
+      "drugClass": {
+        "en": "Antihistamine (2nd generation)",
+        "id": "Antihistamin (generasi kedua)"
+      },
+      "area": {
+        "en": "Allergy and breathing",
+        "id": "Alergi dan pernapasan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy"
+      ],
+      "advice": {
+        "en": "Some people feel a little sleepy. Taking it in the evening can help.",
+        "id": "Sebagian orang merasa sedikit mengantuk. Minum pada malam hari dapat membantu."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "chlorphenamine",
+      "name": "Chlorphenamine (chlorpheniramine)",
+      "aliases": [
+        "klorfeniramin",
+        "CTM"
+      ],
+      "brands": [
+        "Piriton",
+        "Chlor-Trimeton"
+      ],
+      "ingredients": [
+        "chlorphenamine"
+      ],
+      "drugClass": {
+        "en": "Antihistamine (1st generation)",
+        "id": "Antihistamin (generasi pertama)"
+      },
+      "area": {
+        "en": "Allergy and breathing",
+        "id": "Alergi dan pernapasan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          4.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [],
+      "defaultPrn": true,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy",
+        "alcohol"
+      ],
+      "advice": {
+        "en": "This medicine often causes sleepiness.",
+        "id": "Obat ini sering menyebabkan kantuk."
+      },
+      "source": "FDA OTC monograph"
+    },
+    {
+      "id": "ciprofloxacin",
+      "name": "Ciprofloxacin",
+      "aliases": [
+        "siprofloksasin"
+      ],
+      "brands": [
+        "Cipro"
+      ],
+      "ingredients": [
+        "ciprofloxacin"
+      ],
+      "drugClass": {
+        "en": "Fluoroquinolone antibiotic",
+        "id": "Antibiotik fluorokuinolon"
+      },
+      "area": {
+        "en": "Infection",
+        "id": "Infeksi"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          250.0
+        ],
+        [
+          500.0
+        ],
+        [
+          750.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "water",
+        "sun",
+        "course"
+      ],
+      "advice": {
+        "en": "Take 2 hours before or 6 hours after antacids, iron, calcium or zinc.",
+        "id": "Minum 2 jam sebelum atau 6 jam sesudah antasida, zat besi, kalsium, atau seng."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "clopidogrel",
+      "name": "Clopidogrel",
+      "aliases": [
+        "klopidogrel"
+      ],
+      "brands": [
+        "Plavix"
+      ],
+      "ingredients": [
+        "clopidogrel"
+      ],
+      "drugClass": {
+        "en": "Antiplatelet (P2Y12 inhibitor)",
+        "id": "Antiplatelet (penghambat P2Y12)"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          75.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Do not stop before talking to your doctor.",
+        "id": "Jangan berhenti sebelum berbicara dengan dokter."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "diazepam",
+      "name": "Diazepam",
+      "aliases": [],
+      "brands": [
+        "Valium"
+      ],
+      "ingredients": [
+        "diazepam"
+      ],
+      "drugClass": {
+        "en": "Benzodiazepine",
+        "id": "Benzodiazepin"
+      },
+      "area": {
+        "en": "Mental health and sleep",
+        "id": "Kesehatan jiwa dan tidur"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          2.0
+        ],
+        [
+          5.0
+        ],
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "bedtime"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy",
+        "alcohol",
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Causes sleepiness. Usually for short-term use.",
+        "id": "Menyebabkan kantuk. Biasanya untuk pemakaian jangka pendek."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "doxycycline",
+      "name": "Doxycycline",
+      "aliases": [
+        "doksisiklin"
+      ],
+      "brands": [
+        "Vibramycin"
+      ],
+      "ingredients": [
+        "doxycycline"
+      ],
+      "drugClass": {
+        "en": "Tetracycline antibiotic",
+        "id": "Antibiotik tetrasiklin"
+      },
+      "area": {
+        "en": "Infection",
+        "id": "Infeksi"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning",
+        "noon",
+        "evening"
+      ],
+      "food": "with_after",
+      "warnings": [
+        "water",
+        "sun",
+        "course"
+      ],
+      "advice": {
+        "en": "Stay upright for 30 minutes after each dose, so not at bedtime. Keep 2 hours away from antacids, iron or calcium.",
+        "id": "Tetap dalam posisi tegak selama 30 menit setelah minum, jadi jangan sebelum tidur. Beri jarak 2 jam dari antasida, zat besi, atau kalsium."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "empagliflozin",
+      "name": "Empagliflozin",
+      "aliases": [],
+      "brands": [
+        "Jardiance"
+      ],
+      "ingredients": [
+        "empagliflozin"
+      ],
+      "drugClass": {
+        "en": "SGLT2 inhibitor",
+        "id": "Penghambat SGLT2"
+      },
+      "area": {
+        "en": "Diabetes",
+        "id": "Diabetes"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ],
+        [
+          25.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning"
+      ],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take in the morning. Drink enough fluids.",
+        "id": "Minum pada pagi hari. Minum cukup cairan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "enalapril",
+      "name": "Enalapril",
+      "aliases": [],
+      "brands": [
+        "Vasotec"
+      ],
+      "ingredients": [
+        "enalapril"
+      ],
+      "drugClass": {
+        "en": "ACE inhibitor",
+        "id": "Penghambat ACE"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          2.5
+        ],
+        [
+          5.0
+        ],
+        [
+          10.0
+        ],
+        [
+          20.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "A dry cough can happen. Tell your pharmacist if it starts.",
+        "id": "Batuk kering dapat terjadi. Beri tahu apoteker jika muncul."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "famotidine",
+      "name": "Famotidine",
+      "aliases": [
+        "famotidin"
+      ],
+      "brands": [
+        "Pepcid"
+      ],
+      "ingredients": [
+        "famotidine"
+      ],
+      "drugClass": {
+        "en": "H2 blocker",
+        "id": "Penghambat H2"
+      },
+      "area": {
+        "en": "Stomach",
+        "id": "Lambung"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "bedtime"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Often taken at bedtime.",
+        "id": "Sering diminum sebelum tidur."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "fluoxetine",
+      "name": "Fluoxetine",
+      "aliases": [
+        "fluoksetin"
+      ],
+      "brands": [
+        "Prozac"
+      ],
+      "ingredients": [
+        "fluoxetine"
+      ],
+      "drugClass": {
+        "en": "SSRI antidepressant",
+        "id": "Antidepresan SSRI"
+      },
+      "area": {
+        "en": "Mental health and sleep",
+        "id": "Kesehatan jiwa dan tidur"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          10.0
+        ],
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning",
+        "noon"
+      ],
+      "food": "any",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Take in the morning so it does not keep you awake at night.",
+        "id": "Minum pada pagi hari agar tidak sulit tidur di malam hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "furosemide",
+      "name": "Furosemide",
+      "aliases": [
+        "furosemid"
+      ],
+      "brands": [
+        "Lasix"
+      ],
+      "ingredients": [
+        "furosemide"
+      ],
+      "drugClass": {
+        "en": "Loop diuretic",
+        "id": "Diuretik loop"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          20.0
+        ],
+        [
+          40.0
+        ],
+        [
+          80.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning",
+        "noon"
+      ],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take in the morning, or by early afternoon, so you do not need to pass urine at night.",
+        "id": "Minum pada pagi hari, atau paling lambat siang hari, agar tidak perlu buang air kecil di malam hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "gabapentin",
+      "name": "Gabapentin",
+      "aliases": [],
+      "brands": [
+        "Neurontin"
+      ],
+      "ingredients": [
+        "gabapentin"
+      ],
+      "drugClass": {
+        "en": "Gabapentinoid",
+        "id": "Gabapentinoid"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          100.0
+        ],
+        [
+          300.0
+        ],
+        [
+          400.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "noon",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy",
+        "alcohol",
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Can cause sleepiness and dizziness.",
+        "id": "Dapat menyebabkan kantuk dan pusing."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "glipizide",
+      "name": "Glipizide",
+      "aliases": [
+        "glipizid"
+      ],
+      "brands": [
+        "Glucotrol"
+      ],
+      "ingredients": [
+        "glipizide"
+      ],
+      "drugClass": {
+        "en": "Sulfonylurea",
+        "id": "Sulfonilurea"
+      },
+      "area": {
+        "en": "Diabetes",
+        "id": "Diabetes"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          5.0
+        ],
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "before",
+      "warnings": [],
+      "advice": {
+        "en": "Take about 30 minutes before a meal. Do not skip the meal.",
+        "id": "Minum sekitar 30 menit sebelum makan. Jangan melewatkan makan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "hydrochlorothiazide",
+      "name": "Hydrochlorothiazide",
+      "aliases": [
+        "hidroklorotiazid",
+        "HCT"
+      ],
+      "brands": [
+        "Microzide"
+      ],
+      "ingredients": [
+        "hydrochlorothiazide"
+      ],
+      "drugClass": {
+        "en": "Thiazide diuretic",
+        "id": "Diuretik tiazid"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          12.5
+        ],
+        [
+          25.0
+        ],
+        [
+          50.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning",
+        "noon"
+      ],
+      "food": "any",
+      "warnings": [
+        "sun"
+      ],
+      "advice": {
+        "en": "Take in the morning so you do not need to pass urine at night.",
+        "id": "Minum pada pagi hari agar tidak perlu buang air kecil di malam hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "ibuprofen",
+      "name": "Ibuprofen",
+      "aliases": [],
+      "brands": [
+        "Advil",
+        "Brufen"
+      ],
+      "ingredients": [
+        "ibuprofen"
+      ],
+      "drugClass": {
+        "en": "NSAID",
+        "id": "OAINS"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          200.0
+        ],
+        [
+          400.0
+        ],
+        [
+          600.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [],
+      "defaultPrn": true,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [],
+      "advice": {
+        "en": "Take with food or milk to protect the stomach.",
+        "id": "Minum bersama makanan atau susu untuk melindungi lambung."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "levothyroxine",
+      "name": "Levothyroxine",
+      "aliases": [
+        "levotiroksin"
+      ],
+      "brands": [
+        "Synthroid"
+      ],
+      "ingredients": [
+        "levothyroxine"
+      ],
+      "drugClass": {
+        "en": "Thyroid hormone",
+        "id": "Hormon tiroid"
+      },
+      "area": {
+        "en": "Other",
+        "id": "Lainnya"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          25.0
+        ],
+        [
+          50.0
+        ],
+        [
+          75.0
+        ],
+        [
+          88.0
+        ],
+        [
+          100.0
+        ],
+        [
+          112.0
+        ],
+        [
+          125.0
+        ],
+        [
+          150.0
+        ]
+      ],
+      "unit": "mcg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning"
+      ],
+      "food": "before",
+      "warnings": [],
+      "advice": {
+        "en": "Take on an empty stomach, 30 to 60 minutes before breakfast.",
+        "id": "Minum saat perut kosong, 30 sampai 60 menit sebelum sarapan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "loratadine",
+      "name": "Loratadine",
+      "aliases": [
+        "loratadin"
+      ],
+      "brands": [
+        "Claritin"
+      ],
+      "ingredients": [
+        "loratadine"
+      ],
+      "drugClass": {
+        "en": "Antihistamine (2nd generation)",
+        "id": "Antihistamin (generasi kedua)"
+      },
+      "area": {
+        "en": "Allergy and breathing",
+        "id": "Alergi dan pernapasan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take once a day.",
+        "id": "Minum sekali sehari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "lorazepam",
+      "name": "Lorazepam",
+      "aliases": [],
+      "brands": [
+        "Ativan"
+      ],
+      "ingredients": [
+        "lorazepam"
+      ],
+      "drugClass": {
+        "en": "Benzodiazepine",
+        "id": "Benzodiazepin"
+      },
+      "area": {
+        "en": "Mental health and sleep",
+        "id": "Kesehatan jiwa dan tidur"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          0.5
+        ],
+        [
+          1.0
+        ],
+        [
+          2.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "bedtime"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy",
+        "alcohol",
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Causes sleepiness. Usually for short-term use.",
+        "id": "Menyebabkan kantuk. Biasanya untuk pemakaian jangka pendek."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "losartan",
+      "name": "Losartan",
+      "aliases": [],
+      "brands": [
+        "Cozaar"
+      ],
+      "ingredients": [
+        "losartan"
+      ],
+      "drugClass": {
+        "en": "ARB",
+        "id": "ARB"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          25.0
+        ],
+        [
+          50.0
+        ],
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take at the same time each day.",
+        "id": "Minum pada jam yang sama setiap hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "metformin",
+      "name": "Metformin",
+      "aliases": [],
+      "brands": [
+        "Glucophage"
+      ],
+      "ingredients": [
+        "metformin"
+      ],
+      "drugClass": {
+        "en": "Biguanide",
+        "id": "Biguanid"
+      },
+      "area": {
+        "en": "Diabetes",
+        "id": "Diabetes"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          500.0
+        ],
+        [
+          850.0
+        ],
+        [
+          1000.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [],
+      "advice": {
+        "en": "Take with meals to reduce stomach upset.",
+        "id": "Minum bersama makanan untuk mengurangi gangguan lambung."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "metronidazole",
+      "name": "Metronidazole",
+      "aliases": [
+        "metronidazol"
+      ],
+      "brands": [
+        "Flagyl"
+      ],
+      "ingredients": [
+        "metronidazole"
+      ],
+      "drugClass": {
+        "en": "Nitroimidazole antibiotic",
+        "id": "Antibiotik nitroimidazol"
+      },
+      "area": {
+        "en": "Infection",
+        "id": "Infeksi"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          250.0
+        ],
+        [
+          500.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "noon",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [
+        "alcohol",
+        "course"
+      ],
+      "advice": {
+        "en": "No alcohol during the course and for at least 3 days after.",
+        "id": "Jangan minum alkohol selama pengobatan dan setidaknya 3 hari sesudahnya."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "montelukast",
+      "name": "Montelukast",
+      "aliases": [
+        "montelukas"
+      ],
+      "brands": [
+        "Singulair"
+      ],
+      "ingredients": [
+        "montelukast"
+      ],
+      "drugClass": {
+        "en": "Leukotriene receptor antagonist",
+        "id": "Antagonis reseptor leukotrien"
+      },
+      "area": {
+        "en": "Allergy and breathing",
+        "id": "Alergi dan pernapasan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "evening",
+        "bedtime"
+      ],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Usually taken in the evening.",
+        "id": "Biasanya diminum pada malam hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "naproxen",
+      "name": "Naproxen",
+      "aliases": [
+        "naproksen"
+      ],
+      "brands": [
+        "Naprosyn",
+        "Aleve"
+      ],
+      "ingredients": [
+        "naproxen"
+      ],
+      "drugClass": {
+        "en": "NSAID",
+        "id": "OAINS"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          250.0
+        ],
+        [
+          500.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning",
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [],
+      "advice": {
+        "en": "Take with food or milk to protect the stomach.",
+        "id": "Minum bersama makanan atau susu untuk melindungi lambung."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "omeprazole",
+      "name": "Omeprazole",
+      "aliases": [
+        "omeprazol"
+      ],
+      "brands": [
+        "Prilosec"
+      ],
+      "ingredients": [
+        "omeprazole"
+      ],
+      "drugClass": {
+        "en": "Proton pump inhibitor",
+        "id": "Penghambat pompa proton"
+      },
+      "area": {
+        "en": "Stomach",
+        "id": "Lambung"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          10.0
+        ],
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "before",
+      "warnings": [
+        "whole"
+      ],
+      "advice": {
+        "en": "Take 30 to 60 minutes before breakfast.",
+        "id": "Minum 30 sampai 60 menit sebelum sarapan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "pantoprazole",
+      "name": "Pantoprazole",
+      "aliases": [
+        "pantoprazol"
+      ],
+      "brands": [
+        "Protonix"
+      ],
+      "ingredients": [
+        "pantoprazole"
+      ],
+      "drugClass": {
+        "en": "Proton pump inhibitor",
+        "id": "Penghambat pompa proton"
+      },
+      "area": {
+        "en": "Stomach",
+        "id": "Lambung"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "whole"
+      ],
+      "advice": {
+        "en": "Can be taken with or without food. Take at the same time each day.",
+        "id": "Dapat diminum dengan atau tanpa makanan. Minum pada jam yang sama setiap hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "paracetamol",
+      "name": "Paracetamol (acetaminophen)",
+      "aliases": [
+        "parasetamol"
+      ],
+      "brands": [
+        "Panadol",
+        "Tylenol"
+      ],
+      "ingredients": [
+        "paracetamol"
+      ],
+      "drugClass": {
+        "en": "Analgesic (paracetamol)",
+        "id": "Analgesik (parasetamol)"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          500.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [],
+      "defaultPrn": true,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "alcohol"
+      ],
+      "advice": {
+        "en": "Check other medicines for hidden paracetamol.",
+        "id": "Periksa obat lain yang mungkin juga mengandung parasetamol."
+      },
+      "source": "FDA OTC monograph"
+    },
+    {
+      "id": "paracetamol_caffeine",
+      "name": "Paracetamol + caffeine",
+      "aliases": [
+        "parasetamol kafein"
+      ],
+      "brands": [
+        "Panadol Extra"
+      ],
+      "ingredients": [
+        "paracetamol",
+        "caffeine"
+      ],
+      "drugClass": {
+        "en": "Analgesic (paracetamol)",
+        "id": "Analgesik (parasetamol)"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          500.0,
+          65.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [],
+      "defaultPrn": true,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "alcohol"
+      ],
+      "advice": {
+        "en": "Contains paracetamol. Do not take with other paracetamol products.",
+        "id": "Mengandung parasetamol. Jangan diminum bersama produk lain yang mengandung parasetamol."
+      },
+      "source": "Product label"
+    },
+    {
+      "id": "prednisone",
+      "name": "Prednisone",
+      "aliases": [
+        "prednison"
+      ],
+      "brands": [
+        "Deltasone"
+      ],
+      "ingredients": [
+        "prednisone"
+      ],
+      "drugClass": {
+        "en": "Corticosteroid",
+        "id": "Kortikosteroid"
+      },
+      "area": {
+        "en": "Other",
+        "id": "Lainnya"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          5.0
+        ],
+        [
+          10.0
+        ],
+        [
+          20.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "morning"
+      ],
+      "food": "with_after",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Take in the morning with food.",
+        "id": "Minum pada pagi hari bersama makanan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "rosuvastatin",
+      "name": "Rosuvastatin",
+      "aliases": [],
+      "brands": [
+        "Crestor"
+      ],
+      "ingredients": [
+        "rosuvastatin"
+      ],
+      "drugClass": {
+        "en": "Statin",
+        "id": "Statin"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          5.0
+        ],
+        [
+          10.0
+        ],
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Can be taken at any time of day.",
+        "id": "Dapat diminum kapan saja dalam sehari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "sertraline",
+      "name": "Sertraline",
+      "aliases": [
+        "sertralin"
+      ],
+      "brands": [
+        "Zoloft"
+      ],
+      "ingredients": [
+        "sertraline"
+      ],
+      "drugClass": {
+        "en": "SSRI antidepressant",
+        "id": "Antidepresan SSRI"
+      },
+      "area": {
+        "en": "Mental health and sleep",
+        "id": "Kesehatan jiwa dan tidur"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          25.0
+        ],
+        [
+          50.0
+        ],
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "It can take a few weeks to feel the full benefit.",
+        "id": "Manfaat penuh baru terasa setelah beberapa minggu."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "simvastatin",
+      "name": "Simvastatin",
+      "aliases": [],
+      "brands": [
+        "Zocor"
+      ],
+      "ingredients": [
+        "simvastatin"
+      ],
+      "drugClass": {
+        "en": "Statin",
+        "id": "Statin"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          10.0
+        ],
+        [
+          20.0
+        ],
+        [
+          40.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "bedtime"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [
+        "evening",
+        "bedtime"
+      ],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Usually taken in the evening.",
+        "id": "Biasanya diminum pada malam hari."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "sitagliptin",
+      "name": "Sitagliptin",
+      "aliases": [
+        "sitagliptin"
+      ],
+      "brands": [
+        "Januvia"
+      ],
+      "ingredients": [
+        "sitagliptin"
+      ],
+      "drugClass": {
+        "en": "DPP-4 inhibitor",
+        "id": "Penghambat DPP-4"
+      },
+      "area": {
+        "en": "Diabetes",
+        "id": "Diabetes"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          25.0
+        ],
+        [
+          50.0
+        ],
+        [
+          100.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "morning"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [],
+      "advice": {
+        "en": "Take once a day with or without food.",
+        "id": "Minum sekali sehari, dengan atau tanpa makanan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "tamsulosin",
+      "name": "Tamsulosin",
+      "aliases": [],
+      "brands": [
+        "Flomax"
+      ],
+      "ingredients": [
+        "tamsulosin"
+      ],
+      "drugClass": {
+        "en": "Alpha-1 blocker",
+        "id": "Penyekat alfa-1"
+      },
+      "area": {
+        "en": "Other",
+        "id": "Lainnya"
+      },
+      "form": "capsule",
+      "strengths": [
+        [
+          0.4
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "with_after",
+      "warnings": [
+        "whole"
+      ],
+      "advice": {
+        "en": "Take 30 minutes after the same meal each day. Stand up slowly.",
+        "id": "Minum 30 menit setelah makan yang sama setiap hari. Berdiri perlahan."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "tramadol",
+      "name": "Tramadol",
+      "aliases": [],
+      "brands": [
+        "Ultram"
+      ],
+      "ingredients": [
+        "tramadol"
+      ],
+      "drugClass": {
+        "en": "Opioid analgesic",
+        "id": "Analgesik opioid"
+      },
+      "area": {
+        "en": "Pain and inflammation",
+        "id": "Nyeri dan peradangan"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          50.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [],
+      "defaultPrn": true,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "drowsy",
+        "alcohol"
+      ],
+      "advice": {
+        "en": "Can cause sleepiness and constipation.",
+        "id": "Dapat menyebabkan kantuk dan sembelit."
+      },
+      "source": "FDA label (DailyMed)"
+    },
+    {
+      "id": "warfarin",
+      "name": "Warfarin",
+      "aliases": [],
+      "brands": [
+        "Coumadin"
+      ],
+      "ingredients": [
+        "warfarin"
+      ],
+      "drugClass": {
+        "en": "Anticoagulant (vitamin K antagonist)",
+        "id": "Antikoagulan (antagonis vitamin K)"
+      },
+      "area": {
+        "en": "Heart and circulation",
+        "id": "Jantung dan pembuluh darah"
+      },
+      "form": "tablet",
+      "strengths": [
+        [
+          1.0
+        ],
+        [
+          2.0
+        ],
+        [
+          2.5
+        ],
+        [
+          3.0
+        ],
+        [
+          4.0
+        ],
+        [
+          5.0
+        ],
+        [
+          6.0
+        ],
+        [
+          7.5
+        ],
+        [
+          10.0
+        ]
+      ],
+      "unit": "mg",
+      "defaultTimes": [
+        "evening"
+      ],
+      "defaultPrn": false,
+      "bestTimes": [],
+      "food": "any",
+      "warnings": [
+        "alcohol",
+        "dont_stop"
+      ],
+      "advice": {
+        "en": "Take at the same time each day. Keep the amount of leafy green vegetables steady.",
+        "id": "Minum pada jam yang sama setiap hari. Jaga jumlah sayuran hijau tetap stabil."
+      },
+      "source": "FDA label (DailyMed)"
+    }
+  ]
+}

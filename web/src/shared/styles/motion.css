@@ -1,0 +1,14 @@
+/*
+ * One motion language (Material 3 tokens). Feedback is short, state changes
+ * are medium, and only the chart's first lay-down uses the long duration.
+ * No overshoot or bounce anywhere.
+ */
+:root {
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-exit: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --dur-short: 150ms;
+  --dur-medium: 300ms;
+  --dur-long: 450ms;
+  --stagger: 40ms;
+}
